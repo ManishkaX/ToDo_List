@@ -1,0 +1,182 @@
+h1 {
+    position: relative;
+    left: 30%;
+    color: green;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.id {
+    visibility: hidden;
+}
+
+.note {
+    bottom: 0px;
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background-color: antiquewhite;
+    box-shadow: 15px 12px rgb(66, 62, 62);
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+
+.note p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.note:hover {
+    bottom: 10px;
+    /* background-color: green; */
+}
+
+.grid {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 50px; 
+}
+
+.bg_red {
+    background-color: red;
+}
+
+.bg_green {
+    background-color: green;
+}
+
+.addblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+    height: 400px;
+    width: 300px;
+}
+
+.actionTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+
+    position: fixed;
+    left: 90%;
+    top: 55%;
+
+    color: white;
+    font-size: 26px;
+
+}
+
+.addButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+
+    transition: 1s;
+}
+
+.addButton:hover {
+    background-color: rgba(48, 238, 48, 0.631);
+    transform: rotate(120deg);
+}
+
+.removeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+
+    transition: 1s;
+}
+
+.removeButton:hover {
+    background-color: rgba(246, 42, 42, 0.321);
+    transform: rotate(120deg);
+}
+
+.editButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+
+    transition: 1s;
+}
+
+.editButton:hover {
+    background-color: rgba(59, 59, 247, 0.596);
+    transform: rotate(120deg);
+}
+
+.sortByCompleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+
+    transition: 1s;
+}
+
+.sortByDateButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: orange;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+
+    transition: 1s;
+}
+
+/* .sortButton:active {
+    background-color: rgba(0, 0, 0, 0.335);
+    transform: rotate(-120deg);
+} */
+.sortByCompleteWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+#compliteName {
+    color: green;
+    /* visibility: hidden; */
+}
+
+.sortByCompleteButton:hover #compliteName {
+    visibility: hidden;
+    color: yellow;
+}
+

@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        link(href="/css/styles.css" rel="stylesheet")
+        title Notes Pug
+    body 
+        div.grid
+            each note in notes 
+                div.note(class = {bg_red: note.isCompleted == false, bg_green: note.isCompleted == true} )
+                    p #{note.title}
+                    p #{note.date}
+                    p.id #{note.id}
+
+        div.addblock
+            h2 Add Note
+            div
+                form(action="/add", method="POST") 
+                    p Add Header
+                    input(type="text", name="title")
+                    p Description
+                    input(type="text", name="description")
+                    p End Date
+                    input(type="date", name="date")
+                    p Completed 
+                        input(type="checkbox", name="isCompleted")
+                    p
+                    input(type="submit", value="Send")
+
+        div.actionTab
+            div.addButton
+                p +
+            div.removeButton
+                p –
+            div.editButton
+                p ❐
+            //- div.sortByCompleteWrapper
+            //-     p#compliteName Complition
+            div.sortByCompleteButton
+                p C 
+            div.sortByDateButton
+                p D
+
+                
+        script(src="/js/index.js") 
